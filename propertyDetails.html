@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      /* Additional custom styles */
+      @charset "utf-8";
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      .header {
+        width: 100%;
+        height: 15%;
+        background-color: #fcf8f4;
+        border: 1px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo img {
+        display: flex;
+        width: 200px;
+        height: 80px;
+        margin-left: 50px;
+      }
+
+      .nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 70%;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 50px;
+      }
+
+      .nav li {
+        margin-right: 20px;
+        margin-top: 45px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: black;
+        font-size: medium;
+        font-weight: bold;
+      }
+
+      .vertical {
+        border-left: 3px solid black;
+        height: 20px;
+      }
+
+      .container {
+        width: 100%;
+        height: 85%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .property-form {
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        max-width: 70%;
+        height: 86%;
+        background-color: white;
+      }
+      .heading {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        height: 65px;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 0px;
+        margin-right: 20px;
+        background-color: #fcf8f4;
+      }
+
+      .heading a {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fcf8f4;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: medium;
+      }
+      .heading li {
+        max-width: 15%;
+        padding: 25px;
+      }
+
+      .inputs {
+        margin-top: 10px;
+        margin-left: 30px;
+        height: 340px;
+        width: 70%;
+        max-width: 67%;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        /* Example padding */
+        /* Adjust as needed */
+        overflow-y: scroll;
+      }
+
+      .inputs p {
+        margin-top: 10px;
+      }
+
+      .name2 {
+        width: 150%;
+      }
+      .name2 p {
+        margin-top: 25px;
+      }
+
+      .name2 input,
+      .name2 select,
+      .name2 textarea {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 0 14px;
+      }
+
+      #property-form input:focus,
+      #property-form select:focus,
+      #property-form textarea:focus {
+        outline: none;
+        border-color: #1877f2;
+      }
+
+      ::placeholder {
+        color: #777;
+        font-size: 1.063rem;
+      }
+
+      .footer-and-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #122b49;
+        padding: 15px;
+        margin-top: 37%;
+        margin-left: 0px;
+        max-width: 100%;
+        width: 100%;
+        color: white;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #1a3c66;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .radio-group {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        width: 78%;
+        align-items: flex-start;
+      }
+
+      .radio-button {
+        display: flex;
+        align-items: center;
+      }
+
+      .radio-button input {
+        margin-right: 10px;
+      }
+
+      .name2 input {
+        height: 45px;
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 0 14px;
+      }
+
+      .name1 input {
+        height: 45px;
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 0 14px;
+      }
+
+      .name1 {
+        width: 150%;
+      }
+      .name1 p {
+        margin-top: 29px;
+      }
+
+      .name1 input,
+      .name1 select,
+      .name1 textarea {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 0 14px;
+      }
+      .column {
+        width: 230%;
+      }
+
+      .property-options {
+        display: none;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        max-width: 70%;
+      }
+
+      .property-option {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 14px;
+        cursor: pointer;
+        margin-left: 30px;
+      }
+      .property-age,
+      .bhk-type,
+      .bathrooms,
+      .balcony,
+      .tenant-preference,
+      .availability {
+        display: flex;
+        gap: 40px;
+        margin-top: 10px;
+        max-width: 100%;
+      }
+
+      .property-age1,
+      .bhk-type1,
+      .bathrooms1,
+      .balcony1,
+      .tenant-preference1,
+      .availability1 {
+        padding: 9px 15px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .selected {
+        background: linear-gradient(to bottom, #6b869c, #173d5a, #0a2546);
+        color: white;
+        box-shadow: 0 4px 8px rgba(10, 0, 0, 0.2);
+      }
+
+      .name input {
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 0 14px;
+      }
+
+      .name input {
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 0 14px;
+      }
+      #propertyFacing {
+        width: 94%;
+        height: 45px;
+      }
+      .placeholder-option {
+        color: gray;
+      }
+      select {
+        width: 94%;
+        height: 45px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 0 14px;
+      }
+      .section {
+        display: none;
+      }
+
+      .section.active {
+        display: block;
+      }
+      #Maintenance {
+        width: 70%;
+        height: 45px;
+      }
+      .file-input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .file-input {
+        display: none;
+      }
+      .file-label {
+        width: 98%;
+        height: 275px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        cursor: pointer;
+        position: relative;
+      }
+      .file-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      .file-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border: none;
+        background-color: #122b49;
+        color: #fff;
+        border-radius: 4px;
+      }
+      .file-button:hover {
+        background-color: #122b49;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <ul class="nav">
+        <li><a href="#">PROPERTIES</a></li>
+        <li><a href="#">MY DASHBOARD/ACTIVITY</a></li>
+        <li><a href="#">LIST YOUR PROPERTY</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#">MORE</a></li>
+        <li class="vertical"></li>
+        <li><i class="material-icons">&#xe8e2;</i></li>
+        <li><i class="material-icons">person</i></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div style="display: flex; align-items: end; margin-left: 90%">
+        <i style="font-size: 30px" class="fa-regular fa-bell"></i>
+      </div>
+      <form action="#" class="property-form">
+        <ul class="heading">
+          <li id="heading1" class="active" onclick="showSection('section1')">
+            <a href="#">PROPERTY DETAILS</a>
+          </li>
+          <li id="heading2" onclick="showSection('section2')">
+            <a href="#">LOCATION DETAILS</a>
+          </li>
+          <li id="heading3" onclick="showSection('section3')">
+            <a href="#">FEATURES AND AMENITIES</a>
+          </li>
+          <li id="heading4" onclick="showSection('section4')">
+            <a href="#">PRICE DETAILS</a>
+          </li>
+          <li id="heading5" onclick="showSection('section5')">
+            <a href="#">PROPERTY IMAGES</a>
+          </li>
+        </ul>
+
+        <!-- 1st heading -->
+        <div id="section1" class="section active">
+          <div class="inputs">
+            <p>Property For :</p>
+            <div
+              class="radio-group"
+              style="
+                max-width: 73%;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyFor"
+                  value="rent"
+                  id="rent"
+                  required
+                />
+                <label for="rent">Rent</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyFor"
+                  value="sale"
+                  id="sale"
+                  required
+                />
+                <label for="sale">Sale</label>
+              </div>
+            </div>
+
+            <p style="margin-top: 50px">Property Type :</p>
+            <div
+              class="radio-group"
+              style="
+                max-width: 140%;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyType"
+                  value="residential"
+                  id="residential"
+                  required
+                />
+                <label for="residential">Residential</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyType"
+                  value="commercial"
+                  id="commercial"
+                  required
+                />
+                <label for="commercial">Commercial</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyType"
+                  value="land/plot"
+                  id="land-plot"
+                  required
+                />
+                <label for="land-plot">Land / Plot</label>
+              </div>
+            </div>
+
+            <div id="residential-options" class="property-options">
+              <div class="property-option">Flat / Apartment</div>
+              <div class="property-option">House / Villa</div>
+            </div>
+
+            <div id="commercial-options" class="property-options">
+              <div class="property-option">Office Space</div>
+              <div class="property-option">Co working</div>
+              <div class="property-option">Resturant / Cafe</div>
+              <div class="property-option">Shop / Showroom</div>
+              <div class="property-option">Industrial Bldg.</div>
+              <div class="property-option">Industrial Shed</div>
+              <div class="property-option">Warehouse/Godown</div>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                margin-top: 2%;
+              "
+            >
+              <div class="name2">
+                <div class="column">
+                  <p>Built up Area *</p>
+                  <input
+                    style="width: 350px"
+                    type="text"
+                    placeholder="0                                                       Sq. Ft."
+                    required
+                  />
+                </div>
+              </div>
+              <div class="name2">
+                <p>Carpet Area *</p>
+                <input
+                  style="width: 350px"
+                  type="text"
+                  placeholder="0                                                       Sq. Ft."
+                  required
+                />
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 2%;
+              "
+            >
+              <div class="column" style="display: flex; flex-direction: row">
+                <div class="name1">
+                  <p>Property on Floor</p>
+                  <input
+                    style="width: 60%"
+                    type="number"
+                    placeholder="Floor"
+                    required
+                  />
+                </div>
+                <div class="name1" style="margin-right: 80px">
+                  <p>Total Floors</p>
+                  <input
+                    style="width: 60%"
+                    type="number"
+                    placeholder="Total Floor"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="name1" style="margin-left: -60px">
+                <p>Property Facing</p>
+                <!-- <input
+                style="width: 94%"
+                type="text"
+                placeholder="0 Sq. Ft."
+                required
+              /> -->
+                <select name="propertyFacing" id="propertyFacing">
+                  <option value="" class="placeholder-option" disabled selected>
+                    Select
+                  </option>
+                  <option value="North">North</option>
+                  <option value="South">South</option>
+                  <option value="East">East</option>
+                  <option value="West">West</option>
+                  <option value="North-East">North-East</option>
+                  <option value="North-West">North-West</option>
+                  <option value="South-East">South-East</option>
+                  <option value="South-West">South-West</option>
+                </select>
+              </div>
+            </div>
+            <div style="margin-top: 5%">
+              <p>Property Age</p>
+              <div class="property-age">
+                <div class="property-age1">Less than 1 Year</div>
+                <div class="property-age1">1 - 3 Years</div>
+                <div class="property-age1">3 - 5 Years</div>
+                <div class="property-age1">5 - 10 Years</div>
+                <div class="property-age1">Greater than 10 Years</div>
+              </div>
+            </div>
+            <div style="margin-top: 6%">
+              <p>BHK Type</p>
+              <div class="property-age">
+                <div class="property-age1">1 RK</div>
+                <div class="property-age1">1 BHK</div>
+                <div class="property-age1">2 BHK</div>
+                <div class="property-age1">3 BHK</div>
+                <div class="property-age1">4 BHK</div>
+                <div class="property-age1">5+ BHK</div>
+              </div>
+            </div>
+            <div style="margin-top: 6%">
+              <p>Bathrooms/ Toilets</p>
+              <div class="property-age">
+                <div class="property-age1">1</div>
+                <div class="property-age1">2</div>
+                <div class="property-age1">3</div>
+                <div class="property-age1">4</div>
+                <div class="property-age1">5</div>
+                <div class="property-age1">6+</div>
+              </div>
+            </div>
+            <div style="margin-top: 6%">
+              <p>Balcony</p>
+              <div class="property-age">
+                <div class="property-age1">0</div>
+                <div class="property-age1">1</div>
+                <div class="property-age1">2</div>
+                <div class="property-age1">3</div>
+                <div class="property-age1">4+</div>
+              </div>
+            </div>
+            <div style="margin-top: 6%">
+              <p>Tenant Preference</p>
+              <div class="property-age">
+                <div class="property-age1">Any</div>
+                <div class="property-age1">Family</div>
+                <div class="property-age1">Bachelor (Man)</div>
+                <div class="property-age1">Bachelor (Women)</div>
+              </div>
+            </div>
+            <div style="margin-top: 6%">
+              <p>Availability</p>
+              <div class="property-age">
+                <div class="property-age1">Immediate</div>
+                <div class="property-age1">within 15 days</div>
+                <div class="property-age1">within 1 month</div>
+                <div class="property-age1">within 2 months</div>
+              </div>
+            </div>
+            <div style="margin-top: 6%">
+              <p>Property Description</p>
+              <div class="property-age">
+                <input
+                  style="
+                    width: 98%;
+                    height: 75px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                    padding: 0 14px;
+                    margin-bottom: 50px;
+                  "
+                  width="20px"
+                  height="40px"
+                  type="text"
+                  placeholder="Add a description for your property to attract the best tenant"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2nd heading -->
+        <div id="section2" class="section">
+          <div class="inputs">
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                margin-top: -15px;
+              "
+            >
+              <div class="name2">
+                <div class="column">
+                  <p>Building/ Society Name</p>
+                  <input
+                    style="width: 350px"
+                    type="text"
+                    placeholder="Enter Apartment Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="name2">
+                <p>Locality / Area</p>
+                <input
+                  style="width: 350px"
+                  type="text"
+                  placeholder="Eg : sheetal nagar"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                margin-top: 17px;
+              "
+            >
+              <div class="name2">
+                <div class="column">
+                  <p>Landmark / Street Name</p>
+                  <input
+                    style="width: 350px"
+                    type="number"
+                    placeholder="Prominent Landmark"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="name2">
+                <p>City</p>
+                <input
+                  style="width: 350px"
+                  type="number"
+                  placeholder="Mumbai, Maharashtra"
+                  required
+                />
+              </div>
+            </div>
+            <div style="margin-top: 5%">
+              <p>Mark Locality on Map</p>
+              <div class="property-age">
+                <input
+                  style="
+                    width: 98%;
+                    height: 75px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                    padding: 0 14px;
+                    margin-bottom: 50px;
+                  "
+                  width="20px"
+                  height="40px"
+                  type="text"
+                  placeholder="Add a description for your property to attract the best tenant"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd heading -->
+
+        <div id="section3" class="section">
+          <div class="inputs">
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                font-weight: bold;
+              "
+            >
+              <p>General Feaures</p>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                font-weight: bold;
+                margin-top: 50px;
+              "
+            >
+              <p>Non- Veg</p>
+            </div>
+            <div
+              class="radio-group"
+              style="
+                max-width: 53%;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="non-veg"
+                  value="allowed"
+                  id="allowed"
+                  required
+                />
+                <label for="rent">Allowed</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="non-veg"
+                  value="notallowed"
+                  id="notallowed"
+                  required
+                />
+                <label for="sale">Not Allowed</label>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                font-weight: bold;
+                margin-top: 50px;
+              "
+            >
+              <p>Pets Allowed</p>
+            </div>
+            <div
+              class="radio-group"
+              style="
+                max-width: 46%;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="pets"
+                  value="allowed"
+                  id="allowed"
+                  required
+                />
+                <label for="rent">Yes</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="pets"
+                  value="notallowed"
+                  id="notallowed"
+                  required
+                />
+                <label for="sale">No</label>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                font-weight: bold;
+                margin-top: 50px;
+              "
+            >
+              <p>Electricity</p>
+            </div>
+            <div
+              class="radio-group"
+              style="
+                max-width: 61%;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="pets"
+                  value="allowed"
+                  id="allowed"
+                  required
+                />
+                <label for="rent">Rare/No Powercut</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="pets"
+                  value="notallowed"
+                  id="notallowed"
+                  required
+                />
+                <label for="sale">Frequently Powercut</label>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                font-weight: bold;
+                margin-top: 50px;
+              "
+            >
+              <p>Water Supply</p>
+            </div>
+            <div
+              class="radio-group"
+              style="
+                max-width: 70%;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyType"
+                  value="residential"
+                  id="residential"
+                  required
+                />
+                <label for="residential">Municipal Corporation (BMC)</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyType"
+                  value="commercial"
+                  id="commercial"
+                  required
+                />
+                <label for="commercial">Borewell</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  name="propertyType"
+                  value="land/plot"
+                  id="land-plot"
+                  required
+                />
+                <label for="land-plot">Both</label>
+              </div>
+            </div>
+            <br /><br /><br />
+            <hr />
+            <br /><br /><br />
+            <!-- remaining code -->
+          </div>
+        </div>
+
+        <!-- 4th heading -->
+        <div id="section4" class="section">
+          <div class="inputs">
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                margin-top: -15px;
+              "
+            >
+              <div class="name2">
+                <div class="column">
+                  <p>Rent</p>
+                  <input
+                    style="width: 350px"
+                    type="text"
+                    placeholder="&#8377;                                                       /Month"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="name2">
+                <p>City</p>
+                <input
+                  style="width: 350px"
+                  type="text"
+                  placeholder="&#8377;                                                       /Month"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 120px;
+                margin-top: 17px;
+              "
+            >
+              <div class="name2">
+                <div class="column">
+                  <p>Maintenance</p>
+                  <!-- <input
+                    style="width: 350px"
+                    type="text"
+                    placeholder="Prominent Landmark"
+                    required
+                  /> -->
+                  <select
+                    style="width: 350px"
+                    name="Maintenance"
+                    id="Maintenance"
+                  >
+                    <option
+                      value=""
+                      class="placeholder-option"
+                      disabled
+                      selected
+                    >
+                      Maintenance
+                    </option>
+                    <option value="Included in Rent">Included in Rent</option>
+                    <option value="Extra Maintenance">Extra Maintenance</option>
+                  </select>
+                </div>
+              </div>
+              <div class="name2">
+                <p>Maintenance</p>
+                <input
+                  style="width: 350px"
+                  type="text"
+                  placeholder="Mumbai, Maharashtra"
+                  required
+                />
+              </div>
+            </div>
+            <div style="margin-top: 5%">
+              <p>Mark Locality on Map</p>
+              <div class="property-age">
+                <input
+                  style="
+                    width: 98%;
+                    height: 75px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                    padding: 0 14px;
+                    margin-bottom: 50px;
+                  "
+                  width="20px"
+                  height="40px"
+                  type="text"
+                  placeholder="Add a description for your property to attract the best tenant"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5th heading -->
+
+        <div id="section5" class="section">
+          <div class="inputs">
+            <font size="4px">Add Photos / videos to attract more tenants!</font>
+            <br /><br /><br />
+            <font size="3px"
+              >Add Photos of living room, bedroom, bathroom, floor, doors,
+              kitchen, balcony, location map, neighborhood, etc</font
+            >
+            <div class="file-input-container">
+              <input class="file-input" type="file" id="file" />
+              <label for="file" class="file-label">
+                <span class="file-icon"
+                  ><i class="fa-solid fa-camera"></i
+                ></span>
+                <button class="file-button">
+                  <i class="fa-solid fa-plus"></i> Add Photos Now
+                </button>
+              </label>
+            </div>
+            <font size="4px">OR</font>
+            <br /><br />
+            <font size="4px"
+              >We can upload them for you! You can email the pictures and videos
+              to us at Dylanestate.com</font
+            >
+            <br /><br /><br />
+            <font size="2px">Accept formats are .jpg, .gif, .png.</font>
+            <br />
+            <font size="2px"
+              >Maximum size allowed is 20 MB. Minimum dimension allowed 600*400
+              Pixel</font
+            >
+          </div>
+        </div>
+
+        <div class="footer-and-button">
+          <footer class="footer">
+            <p>Need Help? Call 9999999999</p>
+          </footer>
+          <button type="submit">Next</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+    <script>
+      // JavaScript to show/hide property options based on selected property type
+      document
+        .querySelectorAll('input[name="propertyType"]')
+        .forEach((radio) => {
+          radio.addEventListener("change", (event) => {
+            const residentialOptions = document.getElementById(
+              "residential-options"
+            );
+            const commercialOptions =
+              document.getElementById("commercial-options");
+
+            if (event.target.value === "residential") {
+              residentialOptions.style.display = "flex";
+              commercialOptions.style.display = "none";
+            } else if (event.target.value === "commercial") {
+              residentialOptions.style.display = "none";
+              commercialOptions.style.display = "flex";
+            } else {
+              residentialOptions.style.display = "none";
+              commercialOptions.style.display = "none";
+            }
+          });
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const propertyAges = document.querySelectorAll(".property-age1");
+        const propertyOptions = document.querySelectorAll(".property-option");
+        const bhkTypes = document.querySelectorAll(".bhk-type1");
+        const bathrooms = document.querySelectorAll(".bathrooms1");
+        const balconies = document.querySelectorAll(".balcony1");
+        const tenantPreferences = document.querySelectorAll(
+          ".tenant-preference1"
+        );
+        const availabilities = document.querySelectorAll(".availability1");
+
+        function toggleSelection(event) {
+          const selectedElements =
+            event.target.parentNode.querySelectorAll(".selected");
+          selectedElements.forEach((el) => el.classList.remove("selected"));
+          event.target.classList.toggle("selected");
+        }
+
+        propertyAges.forEach((el) =>
+          el.addEventListener("click", toggleSelection)
+        );
+        propertyOptions.forEach((el) =>
+          el.addEventListener("click", toggleSelection)
+        );
+        bhkTypes.forEach((el) => el.addEventListener("click", toggleSelection));
+        bathrooms.forEach((el) =>
+          el.addEventListener("click", toggleSelection)
+        );
+        balconies.forEach((el) =>
+          el.addEventListener("click", toggleSelection)
+        );
+        tenantPreferences.forEach((el) =>
+          el.addEventListener("click", toggleSelection)
+        );
+        availabilities.forEach((el) =>
+          el.addEventListener("click", toggleSelection)
+        );
+      });
+    </script>
+    <script>
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => section.classList.remove("active"));
+
+        // Show the selected section
+        const activeSection = document.getElementById(sectionId);
+        activeSection.classList.add("active");
+
+        // Update heading background color
+        const headings = document.querySelectorAll(".heading li");
+        headings.forEach((heading) => heading.classList.remove("active"));
+
+        const activeHeading = document.querySelector(
+          `#heading${sectionId.charAt(sectionId.length - 1)}`
+        );
+        activeHeading.classList.add("active");
+      }
+
+      function submitForm() {
+        // Here you can handle the form submission
+        alert("Form Submitted!");
+      }
+
+      // Prevent the form from submitting by default
+      document
+        .getElementById("property-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          submitForm();
+        });
+    </script>
+  </body>
+</html>
